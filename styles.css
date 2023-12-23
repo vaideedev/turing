@@ -1,0 +1,353 @@
+/* html {
+            color-scheme: dark !important;
+        } */
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-weight: 600;
+}
+/* input {
+  outline: none;
+} */
+
+.header {
+  text-align: center;
+  /* background-color: #2094f3; */
+  color: #2094f3;
+  padding: 15px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+.turing-machine input {
+  font: 20px;
+  max-width: 960px;
+  justify-content: center;
+  align-items: center;
+}
+
+.turing-machine select {
+  font: 16px "Montserrat";
+}
+
+.alphabet input[type="text"] {
+  width: 230px;
+}
+
+.input-word input[type="text"] {
+  margin-top: 10px;
+  width: 252px;
+}
+
+#input-word-box {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+#alphabet-box {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+.init-state {
+  margin-top: 10px;
+}
+
+.control-btn {
+  background: transparent;
+  border: 1px solid #000;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  font-family: "Montserrat";
+  font-size: 16px !important;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: rgba(32, 148, 243);
+  cursor: pointer;
+  transition: all 200ms;
+  appearance: none;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.control-btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.control-btn:hover {
+  background-color: #2c974b;
+}
+
+.control-btn:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.control-btn:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+.control-btn:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+.scroll-block {
+  overflow: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  user-select: none;
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 2px 5px;
+}
+
+.tape {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+}
+
+.tape-cell {
+  display: table-cell;
+  border: 1px solid #000;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tape-cell-input {
+  background: transparent;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+}
+
+.tape-cell-btn {
+  font-size: 30px;
+  user-select: none;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.tape-cell-btn:hover {
+  color: #2196f3;
+}
+
+.tape-cell-curr {
+  background: #b3ffb4;
+}
+
+.states {
+  width: calc(100% - 2px);
+  display: table;
+  border-collapse: collapse;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.states-row {
+  display: table-row;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.states-cell {
+  display: table-cell;
+  border: 1px solid #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.states-cell:first-child {
+  min-width: 150px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.states-btn {
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 100%;
+  margin: 2px 5px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.states-btn:hover {
+  color: #2196f3;
+  border-color: #2196f3;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.states-cell-input {
+  background: transparent;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  width: 100%;
+}
+
+.states-cell-name-input {
+  width: calc(100% - 40px);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.states-error {
+  background: #faa;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.states-curr {
+  background: #b3ffb4;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.num-calc {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #43aaee;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+}
+
+.num-calc-full-width {
+  width: auto;
+}
+
+.num-calc p {
+  margin: 0;
+}
+
+.num-calc .headline {
+  font-size: 130%;
+  text-align: center;
+}
+
+.num-calc select {
+  font-size: 16px;
+}
+
+.num-calc .calc-btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background: #ddd;
+  border-top: 3px solid #bbb;
+  border-radius: 7px;
+  outline: none;
+  margin: 0 10px;
+}
+
+.num-calc .calc-btn:hover {
+  background: #43aaee;
+  border-top: 2px solid #3299dd;
+  padding-top: 11px;
+  color: #fff;
+}
+
+.num-calc .calc-btn:active {
+  background: #3299dd;
+  color: #fff;
+  border-top: 2px solid #2188cc;
+}
+
+.num-calc .calc-result {
+  display: none;
+  margin-top: 10px;
+  font-size: 20px;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.num-calc .calc-solve {
+  display: none;
+  margin-top: 10px;
+  font-size: 20px;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.calc-statistics {
+  color: #666;
+  font-size: 16px;
+  position: absolute;
+  right: 5px;
+  top: calc(100% + 3px);
+  display: none;
+}
+
+.error-text {
+  color: red;
+}
+
+#info-box {
+  margin-top: 20px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 18px;
+  text-align: center;
+}
+
+code {
+  text-align: left;
+  line-height: 1.6;
+  padding: 0.1em 0.25em;
+  font-size: 90%;
+  background-color: rgb(205, 225, 255);
+  color: #24292e;
+  border-radius: 3px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
